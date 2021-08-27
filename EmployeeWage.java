@@ -2,7 +2,7 @@ public class EmployeeWage {
 	public static final int IS_FULL_TIME = 1;
 	public static final int IS_PART_TIME = 2;
 
-	public static void wageCalculationForAMonth(int empRatePerHr, int totalWorkingDaysInAMonth, int maxHrsInAMonth) {
+	public static void wageCalculationForAMonth(String companyName,int empRatePerHr, int totalWorkingDaysInAMonth, int maxHrsInAMonth) {
 		int totalWage = 0;
 		int totalWorkingDays = 0;
 		int totalEmpHrs = 0;
@@ -25,13 +25,15 @@ public class EmployeeWage {
 			System.out.println("Emp Wage is : " + empWage);
 			totalWage += empWage;
 		}
-		System.out.println("Total working hours in a month is : " + totalEmpHrs);
-		System.out.println("Total Wage is : " + totalWage);
+		System.out.println("Total working hours in a month for company "+companyName+" is "+ totalEmpHrs);
+		System.out.println("Total Wage in a month for companyy "+companyName+" is "+ totalWage);
 
 	}
 
 	public static void main(String[] args) {
-		wageCalculationForAMonth(20, 20, 100);
+		wageCalculationForAMonth("D-Mart",20, 20, 100);
+		wageCalculationForAMonth("Reliance",10, 30, 120);
 	}
 }
+
 
